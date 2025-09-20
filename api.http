@@ -1,0 +1,8 @@
+### Get JWT token (login)
+POST http://127.0.0.1:8000/authentication/
+Content-Type: application/json
+
+{
+  "username": "service_user_@izyane.com",
+  "password": "11"
+}
