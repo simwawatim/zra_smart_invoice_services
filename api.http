@@ -1,8 +1,36 @@
-### Get JWT token (login)
-POST http://127.0.0.1:8000/authentication/
+### Save Item Test
+POST http://localhost:8000/items/api/saveItem/ HTTP/1.1
 Content-Type: application/json
 
 {
-  "username": "service_user_@izyane.com",
-  "password": "11"
+  "tpin": "1000000000",
+  "bhfId": "000",
+  "itemCd": "P200005",
+  "itemClsCd": "43322555",
+  "itemTyCd": "2",
+  "itemNm": "Corn Flakes",
+  "itemStdNm": "Corn Flakes",
+  "orgnNatCd": "SA",
+  "pkgUnitCd": "BOX",
+  "qtyUnitCd": "U",
+  "vatCatCd": "A",
+  "iplCatCd": "IPL1",
+  "tlCatCd": null,
+  "exciseTxCatCd": null,
+  "btchNo": null,
+  "bcd": null,
+  "dftPrc": 15.0,
+  "manufacturerTpin": "1000000000",
+  "manufacturerItemCd": "ZM2EA1234",
+  "rrp": 1000.0,
+  "svcChargeYn": "Y",
+  "rentalYn": "N",
+  "addInfo": null,
+  "sftyQty": 5,
+  "isrcAplcbYn": "N",
+  "useYn": "Y",
+  "regrNm": "ADMIN",
+  "regrId": "ADMIN",
+  "modrNm": "ADMIN",
+  "modrId": "ADMIN"
 }
