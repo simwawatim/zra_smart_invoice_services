@@ -1,16 +1,20 @@
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
-from .utils import format_item_data  
 from rest_framework.permissions import AllowAny
-from services.zra_client import SmartInvoiceClient 
 
-class SaveItemView(APIView):
+from services.zra_client import SmartInvoiceClient
+
+
+
+class SaveStockView(APIView):
     permission_classes = [AllowAny]
+
     def post(self, request):
-        item_data = format_item_data(request.data)
-        ZRA_CLIENT_INSTANCE = SmartInvoiceClient()
-        result = ZRA_CLIENT_INSTANCE.save_item(item_data)
+        stock_data = request.data
+        client = SmartInvoiceClient()
+        result = client.save_stock(stock_data)
+
         if 'error' in result:
             return Response({"error": result["error"]}, status=status.HTTP_400_BAD_REQUEST)
 

@@ -3,7 +3,7 @@ POST http://localhost:8000/items/api/saveItem/ HTTP/1.1
 Content-Type: application/json
 
 {
-  "tpin": "1000000000",
+  "tpin": "2484778002",
   "bhfId": "000",
   "itemCd": "P200005",
   "itemClsCd": "43322555",
@@ -33,4 +33,49 @@ Content-Type: application/json
   "regrId": "ADMIN",
   "modrNm": "ADMIN",
   "modrId": "ADMIN"
+}
+
+### Save Item Stock
+POST http://localhost:8000/stock/api/save-stock/ HTTP/1.1
+Content-Type: application/json
+
+{
+  "tpin": "2484778002",
+  "bhfId": "000",
+  "sarNo": 1,
+  "orgSarNo": 0,
+  "regTyCd": "M",
+  "custTpin": null,
+  "custNm": null,
+  "custBhfId": null,
+  "sarTyCd": "02",
+  "ocrnDt": "20240509",
+  "totItemCnt": 1,
+  "totTaxblAmt": 86.2069,
+  "totTaxAmt": 13.7931,
+  "totAmt": 100,
+  "remark": null,
+  "regrId": "Admin",
+  "regrNm": "Admin",
+  "modrNm": "Admin",
+  "modrId": "Admin",
+  "itemList": [
+    {
+      "itemSeq": 1,
+      "itemCd": "20044",
+      "itemClsCd": "50102517",
+      "itemNm": "Soupu dedede",
+      "pkgUnitCd": "BA",
+      "qtyUnitCd": "BE",
+      "qty": 1,
+      "pkg": 1,
+      "totDcAmt": 0,
+      "prc": 100,
+      "splyAmt": 100,
+      "taxblAmt": 86.21,
+      "vatCatCd": "A",
+      "taxAmt": 13.79,
+      "totAmt": 100
+    }
+  ]
 }
