@@ -1,0 +1,15 @@
+
+{
+  "resultCd": "000",
+  "resultMsg": "It is succeeded",
+  "resultDt": "20250922222711",
+  "data": {
+    "rcptNo": 1010,
+    "intrlData": "ORKT6VWUYPR3M55DXQVUI327JQ",
+    "rcptSign": "LDQ6YF6FJIPPPBZI",
+    "vsdcRcptPbctDate": "20250922222711",
+    "sdcId": "SDC0010002709",
+    "mrcNo": "WIS00003717  ",
+    "qrCodeUrl": "https://sandboxportal.zra.org.zm/indexInvoiceData?Data=2484778002000LDQ6YF6FJIPPPBZI"
+  }
+}
