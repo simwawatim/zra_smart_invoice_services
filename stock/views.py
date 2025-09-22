@@ -19,3 +19,17 @@ class SaveStockView(APIView):
             return Response({"error": result["error"]}, status=status.HTTP_400_BAD_REQUEST)
 
         return Response(result, status=status.HTTP_201_CREATED)
+    
+
+
+
+class SaveStockMaster(APIView):
+    permission_classes = [AllowAny]
+    def post(self, request):
+        stock_master_data = request.data
+        client = SmartInvoiceClient()
+        result = client.save_stock_master(stock_master_data)
+
+        if 'error' in result:
+            return Response({"error": result["error"]}, status=status.HTTP_400_BAD_REQUEST)
+        return Response(result, status=status.HTTP_201_CREATED)

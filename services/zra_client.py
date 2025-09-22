@@ -26,3 +26,6 @@ class SmartInvoiceClient:
     def save_stock(self, stock_data):
         """Save stock details to Smart Invoice"""
         return self._post("/stock/saveStockItems", stock_data)
+    
+    def save_stock_master(self, stock_master_data):
+        return self._post("/stockMaster/saveStockMaster", stock_master_data)

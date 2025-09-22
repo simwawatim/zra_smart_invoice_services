@@ -79,3 +79,31 @@ Content-Type: application/json
     }
   ]
 }
+
+
+### Save Item Stock Master
+POST http://localhost:8000/stock/api/save-stock-master/ HTTP/1.1
+Content-Type: application/json
+
+{
+  "tpin": "2484778002",
+  "bhfId": "000",
+  "regrId": "Admin",
+  "regrNm": "Admin",
+  "modrNm": "Admin",
+  "modrId": "Admin",
+  "stockItemList": [
+    {
+      "itemCd": "P10007",
+      "rsdQty": 34
+    },
+    {
+      "itemCd": "P10005",
+      "rsdQty": 34
+    },
+    {
+      "itemCd": "P10006",
+      "rsdQty": 34
+    }
+  ]
+}
