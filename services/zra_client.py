@@ -18,6 +18,17 @@ class SmartInvoiceClient:
             return response.json()
         except requests.exceptions.RequestException as e:
             return {"error": str(e)}
+        
+
+    def _get(self, endpoint, data):
+        url = f"{self.base_url}/{endpoint}"
+        try:
+            response =  requests.get(url=url, headers= self.headers, json=data)
+            response.raise_for_status()
+            return response.json()
+
+        except requests.exceptions.RequestException as e:
+            return {"error": str(e)}
 
     def _get_codes(self, endpoint, value):
         url = f"{self.internal_url}/{endpoint}/{value}/"
@@ -48,3 +59,10 @@ class SmartInvoiceClient:
     
     def save_sale(self, sale_data):
         return self._post("trnsSales/saveSales", sale_data)
+    
+
+    def get_customer(self, customer_data):
+        return self._post("customers/selectCustomer", customer_data)
+    
+    def save_branch_customer(self, customer_data):
+        return self._post("branches/saveBrancheCustomers", customer_data)
