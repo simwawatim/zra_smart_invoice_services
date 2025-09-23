@@ -1,3 +1,17 @@
+### Get Unit of Measure by Code
+GET http://127.0.0.1:8000/codes/api/get-unit-of-measure-code/Pair/
+Accept: application/json
+
+### Get Packaging Unit Code
+GET http://127.0.0.1:8000/codes/api/packaging-unit-code/Bag/
+Accept: application/json
+
+### Get Country Code by Name
+GET http://127.0.0.1:8000/codes/api/country-code/Zambia/
+Accept: application/json
+
+
+
 ### Save Item Test
 POST http://localhost:8000/items/api/saveItem/ HTTP/1.1
 Content-Type: application/json

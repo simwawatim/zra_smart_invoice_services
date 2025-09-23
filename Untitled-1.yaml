@@ -1,0 +1,16 @@
+curl -X POST "https://integrationsuat.napsa.co.zm/central-authentication-integrations/auth/authenticate"   -H "Content-Type: application/json"   -H "clientId: 73cd3389-f242-48eb-ac86-22b932417d0f"   -H "grantType: password"   -H "scope: *"   -d '{
+"username": "izyane_api_user_uat",
+"password": "3b49f8a0-af58-4298-b0fd-208c4a5604fa"}'
+
+
+
+curl -X POST "https://integrationsuat.napsa.co.zm/central-authentication-integrations/auth/authenticate" \
+  -H "Content-Type: application/json" \
+  -H "clientId: 73cd3389-f242-48eb-ac86-22b932417d0f" \
+  -H "grantType: password" \
+  -H "scope: *" \
+  --max-time 30 \
+  -d '{
+    "username": "izyane_api_user_uat",
+    "password": "3b49f8a0-af58-4298-b0fd-208c4a5604fa"
+}'
