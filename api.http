@@ -620,3 +620,75 @@ Content-Type: application/json
   ]
 }
 
+
+### Get Purchases
+POST http://127.0.0.1:8000/purchase/api/purchases/get/
+Content-Type: application/json
+
+{
+    "tpin": "2484778002",
+    "bhfId": "000",
+    "lastReqDt": "20231215000000"
+}
+
+### Save Purchase
+POST http://127.0.0.1:8000/purchase/api/purchases/save/
+Content-Type: application/json
+
+{
+  "tpin": "2484778002",
+  "bhfId": "000",
+  "cisInvcNo": "ACC-PINV-2025-00087",
+  "spplrTpin": "1000000000",
+  "spplrNm": "SMART SUPPLIER",
+  "spplrInvcNo": "12",
+  "regTyCd": "M",
+  "pchsTyCd": "N",
+  "rcptTyCd": "P",
+  "pmtTyCd": "01",
+  "pchsSttsCd": "02",
+  "cfmDt": "20250923221815",
+  "pchsDt": "20250923",
+  "cnclReqDt": "",
+  "cnclDt": "",
+  "totItemCnt": 1,
+  "totTaxblAmt": 86.21,
+  "totTaxAmt": 13.79,
+  "totAmt": 100.0,
+  "remark": "add",
+  "regrNm": "timothy",
+  "regrId": "timothy",
+  "modrNm": "timothy",
+  "modrId": "timothy",
+  "itemList": [
+    {
+      "itemSeq": 1,
+      "itemCd": "AC2AM4B7397629",
+      "itemClsCd": "50193001",
+      "itemNm": "Juice",
+      "bcd": "",
+      "pkgUnitCd": "AM",
+      "pkg": 0,
+      "qtyUnitCd": "4B",
+      "qty": 1.0,
+      "prc": 100.0,
+      "splyAmt": 100.0,
+      "dcRt": 0,
+      "dcAmt": 0,
+      "taxTyCd": "A",
+      "iplCatCd": null,
+      "tlCatCd": null,
+      "exciseCatCd": null,
+      "taxblAmt": 86.21,
+      "vatCatCd": "A",
+      "iplTaxblAmt": "",
+      "tlTaxblAmt": "",
+      "exciseTaxblAmt": "",
+      "taxAmt": 13.79,
+      "iplAmt": "",
+      "tlAmt": "",
+      "exciseTxAmt": "",
+      "totAmt": 100.0
+    }
+  ]
+}

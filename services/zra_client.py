@@ -66,3 +66,9 @@ class SmartInvoiceClient:
     
     def save_branch_customer(self, customer_data):
         return self._post("branches/saveBrancheCustomers", customer_data)
+    
+    def get_purchases(self, purchase_data):
+        return self._post("/trnsPurchase/selectTrnsPurchaseSales", purchase_data)
+    
+    def save_purchase(self, purchase_data):
+        return self._post("trnsPurchase/savePurchase", purchase_data)
